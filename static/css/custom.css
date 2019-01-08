@@ -1,0 +1,163 @@
+body {
+    background-color: #f8f8f8;
+    letter-spacing: 0.3px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.row > li {
+    background-color: #fff;
+    box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.col-centered {
+    float: none;
+    list-style-type: none;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 36px 48px;
+}
+
+.header_article {
+    border-bottom: #888888 1px solid;
+    font-size: 25px;
+    color: #505153;
+    line-height: 35px;
+    padding-bottom: 5px;
+}
+
+.header_article a {
+    color: #505153;
+}
+
+.header_article a:hover {
+    text-decoration: underline;
+}
+
+.header_article .tag {
+    color: #8b8e92;
+    font-size: 16px;
+}
+
+.header_article .tag span {
+    display: inline-block;
+    float: right;
+}
+
+.content {
+    padding-top: 10px;
+    font-size: 17px;
+    color: #505153;
+    line-height: 26px;
+}
+
+.pagination-position {
+    position: relative;
+    left: 18px;
+}
+
+.pager li a {
+    color: #505158;
+}
+
+/* ------------ archive.html ----------*/
+.tag-list li a,
+.tag-item li a {
+    font-size: 19px;
+    line-height: 25px;
+    color: #505158;
+    cursor: pointer;
+}
+
+.tag-list li a {
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration: none;
+}
+
+/* -------- article.html ---------*/
+
+.article {
+    background-color: #fff;
+    box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.article-header {
+    text-align: center;
+    line-height: 80px;
+}
+
+.article-body {
+    font-size: 17px;
+}
+
+.side-catalog {
+    position: fixed;
+    left: 0;
+    padding-top: 100px;
+    color: #bfbfbf;
+}
+
+#catalog {
+    padding: 0px;
+    font-size: 17px;
+}
+
+.catalog-body {
+    font-size: 15px;
+}
+
+.catalog-body li {
+    border-radius: 5px;
+    margin-left: -20px;
+}
+
+.catalog-body a {
+    text-decoration: none;
+    color: #bfbfbf;
+}
+
+.catalog-body li.active,
+.catalog-body li:hover {
+    background-color: #f0f0f0;
+}
+
+/*------------ write.html -------------*/
+
+.blog-edit {
+    background-color: #fff;
+    box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.blog-edit .form-control {
+    border-top: none;
+}
+
+.blog-edit li[role=presentation] a {
+    color: #555555;
+}
+
+.blog-edit li.active a {
+    font-weight: bold;
+}
+
+.custom-edit-button {
+    margin-bottom: 20px;
+}
+
+.blog-edit .preview-aritle {
+    display: none;
+}
+.blog-edit textarea,
+.blog-edit .preview-aritle {
+    font-size: 18px;
+}

@@ -138,8 +138,13 @@ li {
     margin-bottom: 20px;
 }
 
+.blog-edit label {
+    display: none;
+}
+
 .blog-edit .form-control {
     border-top: none;
+    box-shadow: none;
 }
 
 .blog-edit li[role=presentation] a {
@@ -150,7 +155,7 @@ li {
     font-weight: bold;
 }
 
-.custom-edit-button {
+.submit-article-button {
     margin-bottom: 20px;
 }
 
@@ -160,4 +165,19 @@ li {
 .blog-edit textarea,
 .blog-edit .preview-aritle {
     font-size: 18px;
+}
+
+.preview-aritle {
+    padding: 10px 10px 10px 20px;
+    width: auto;
+    overflow-wrap: break-word;
+}
+
+.submit-article-button {
+    color: whitesmoke;
+    background: linear-gradient(to bottom, limegreen , green);
+}
+
+.showMymodal {
+    display: none;
 }

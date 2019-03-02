@@ -16,9 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from iblog.views import getindex
+from iblog.views import httptest, getindex, getarchive, getarticle, getwrite, article_save, markup
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', getindex),
+    url(r'^$', getindex, name='index'),
+    url(r'^archive/$', getarchive, name='archive'),
+    url(r'^article/$', getarticle, name='article'),
+    url(r'^write/$', getwrite, name='write'),
+    url(r'^article_save/$', article_save, name='article_save'),
+    url(r'^markup/$', markup, name='markup'),
+    url(r'^test', httptest, name='test'),
 ]

@@ -35,8 +35,8 @@
                 
                 <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="archive.html">归档</a></li>
+                        <li class="active"><a href={% url 'index' %}>首页 <span class="sr-only">(current)</span></a></li>
+                        <li><a href={% url 'archive' %}>归档</a></li>
                     </ul>
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
@@ -50,84 +50,21 @@
         <main role="main">
             <div class="container">
                 <ul class="row">
+                  {% for article in all_article %}
                     <li class="col-sm-8 col-centered">
                         <header class="header_article">
-                            <a class="title" href="article.html">
-                                To 2019, and beyond!
+                            <a class="title" href={% url 'article' %}>
+                                {{ article.title }}
                             </a>
                             <div class="tag">
-                                 Android | Front-End | iOS | Leveling Up | Mac <span>Jan 1, 2019 </span>
+                                 Android | Front-End | iOS | Leveling Up | Mac <span>{{ article.create_time }} </span>
                             </div>
                         </header>
                         <p class="content">
-                            Let’s get right to it. You need to test your code, and you need to test it often. You do a lot of manual testing throughout the development process, find bugs, and fix them. While this can be very beneficial, it leaves much of the code untested. When I say untested, I mean untested by you. The code will be tested at some point, it just might be by one of your users. This is where writing automated unit tests comes in, however, it is often the last thing developers do, if at all. Where do you start? How do you make this class testable? Many of these challenges can be overcome by using protocols to mock our objects in testing.
+                            {{ article.body }}
                         </p>
                     </li>
-                    <li class="col-sm-8 col-centered">
-                        <header class="header_article">
-                            <a class="title" href="#">
-                                To 2019, and beyond!
-                            </a>
-                            <div class="tag">
-                                 Android | Front-End | iOS | Leveling Up | Mac <span>Jan 1, 2019 </span>
-                            </div>
-                        </header>
-                        <p class="content">
-                            Let’s get right to it. You need to test your code, and you need to test it often. You do a lot of manual testing throughout the development process, find bugs, and fix them. While this can be very beneficial, it leaves much of the code untested. When I say untested, I mean untested by you. The code will be tested at some point, it just might be by one of your users. This is where writing automated unit tests comes in, however, it is often the last thing developers do, if at all. Where do you start? How do you make this class testable? Many of these challenges can be overcome by using protocols to mock our objects in testing.
-                        </p>
-                    </li>
-                    <li class="col-sm-8 col-centered">
-                        <header class="header_article">
-                            <a class="title" href="#">
-                                To 2019, and beyond!
-                            </a>
-                            <div class="tag">
-                                 Android | Front-End | iOS | Leveling Up | Mac <span>Jan 1, 2019 </span>
-                            </div>
-                        </header>
-                        <p class="content">
-                            Let’s get right to it. You need to test your code, and you need to test it often. You do a lot of manual testing throughout the development process, find bugs, and fix them. While this can be very beneficial, it leaves much of the code untested. When I say untested, I mean untested by you. The code will be tested at some point, it just might be by one of your users. This is where writing automated unit tests comes in, however, it is often the last thing developers do, if at all. Where do you start? How do you make this class testable? Many of these challenges can be overcome by using protocols to mock our objects in testing.
-                        </p>
-                    </li>
-                    <li class="col-sm-8 col-centered">
-                        <header class="header_article">
-                            <a class="title" href="#">
-                                To 2019, and beyond!
-                            </a>
-                            <div class="tag">
-                                 Android | Front-End | iOS | Leveling Up | Mac <span>Jan 1, 2019 </span>
-                            </div>
-                        </header>
-                        <p class="content">
-                            Let’s get right to it. You need to test your code, and you need to test it often. You do a lot of manual testing throughout the development process, find bugs, and fix them. While this can be very beneficial, it leaves much of the code untested. When I say untested, I mean untested by you. The code will be tested at some point, it just might be by one of your users. This is where writing automated unit tests comes in, however, it is often the last thing developers do, if at all. Where do you start? How do you make this class testable? Many of these challenges can be overcome by using protocols to mock our objects in testing.
-                        </p>
-                    </li>
-                    <li class="col-sm-8 col-centered">
-                        <header class="header_article">
-                            <a class="title" href="#">
-                                To 2019, and beyond!
-                            </a>
-                            <div class="tag">
-                                 Android | Front-End | iOS | Leveling Up | Mac <span>Jan 1, 2019 </span>
-                            </div>
-                        </header>
-                        <p class="content">
-                            Let’s get right to it. You need to test your code, and you need to test it often. You do a lot of manual testing throughout the development process, find bugs, and fix them. While this can be very beneficial, it leaves much of the code untested. When I say untested, I mean untested by you. The code will be tested at some point, it just might be by one of your users. This is where writing automated unit tests comes in, however, it is often the last thing developers do, if at all. Where do you start? How do you make this class testable? Many of these challenges can be overcome by using protocols to mock our objects in testing.
-                        </p>
-                    </li>
-                    <li class="col-sm-8 col-centered">
-                        <header class="header_article">
-                            <a class="title" href="#">
-                                To 2019, and beyond!
-                            </a>
-                            <div class="tag">
-                                 Android | Front-End | iOS | Leveling Up | Mac <span>Jan 1, 2019 </span>
-                            </div>
-                        </header>
-                        <p class="content">
-                            Let’s get right to it. You need to test your code, and you need to test it often. You do a lot of manual testing throughout the development process, find bugs, and fix them. While this can be very beneficial, it leaves much of the code untested. When I say untested, I mean untested by you. The code will be tested at some point, it just might be by one of your users. This is where writing automated unit tests comes in, however, it is often the last thing developers do, if at all. Where do you start? How do you make this class testable? Many of these challenges can be overcome by using protocols to mock our objects in testing.
-                        </p>
-                    </li>
+                  {% endfor %}
                 </ul>
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2 pagination-position">

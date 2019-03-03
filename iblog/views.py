@@ -9,7 +9,6 @@ from iblog.models import Category, Article
 def getindex(request):
     all_article = Article.objects.all()
 
-    pass
     return render(request, 'index.html', context={
         'all_article': all_article,
     })
@@ -20,7 +19,13 @@ def getwrite(request):
 
 
 def getarticle(request):
-    return render(request, 'article.html')
+    articles = Article.objects.all()
+    article = articles.filter(title='python')[0]
+    article_md = markdown(article.body)
+    return render(request, 'article.html', context={
+        'article': article,
+        'article_md': article_md,
+    })
 
 
 def getarchive(request):
@@ -30,16 +35,17 @@ def getarchive(request):
 def markup(request):
     if request.method == 'POST':
         article = request.POST.get('article')
-        mdarticle = markdown(article)
-        return HttpResponse(mdarticle)
+        article_md = markdown(article)
+        return HttpResponse(article_md)
     pass
 
 
 def article_save(request):
     if request.method == 'POST':
+        title = request.POST.get('title', '')
         article = request.POST.get('article', '')
         category = request.POST.get('category', '')
-        if article != '' and category != '':
+        if article != '' and category != '' and title != '':
             return HttpResponse("Success")
         else:
             return HttpResponse("Fail")

@@ -97,6 +97,10 @@ li {
     font-size: 17px;
 }
 
+.article-body .article-hide {
+    display:none
+}
+
 .side-catalog {
     position: fixed;
     left: 0;
@@ -129,6 +133,10 @@ li {
 }
 
 /*------------ write.html -------------*/
+
+#title {
+    padding-top: 30px;
+}
 
 .blog-edit {
     background-color: #fff;

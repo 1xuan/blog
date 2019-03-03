@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>write blog</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,6 +23,15 @@
         <!-- Add your site or application content here -->
         <div class="container editchange">
 
+          {#  title form #}
+          <form id="title">
+            <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Article Title</span>
+            <input name="title" type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+            {% csrf_token %}
+          </div>
+          </form>
+
             {# editor #}
             <div class="blog-edit">
                 <ul class="nav nav-tabs">
@@ -32,7 +41,6 @@
                 <form id="article" action="" method="post">
                   <label for="textarea"></label>
                   <textarea id="textarea" name="article" class="form-control edit-area" rows="27"></textarea>
-                  {% csrf_token %}
                 </form>
                 <div class="preview-aritle"></div>
             </div>
@@ -42,7 +50,7 @@
                 <div class="form-group form-group-sm">
                     <label class="col-sm-1 control-label" for="formGroupInputLarge">categories:</label>
                     <div class="col-sm-11">
-                        <input name="category" class="form-control" type="text" id="formGroupInputLarge" placeholder="add categories">
+                      <input name="category" class="form-control" type="text" id="formGroupInputLarge" placeholder="add categories">
                     </div>
                 </div>
             </form>

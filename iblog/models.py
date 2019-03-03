@@ -4,17 +4,18 @@ from django.db import models
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(primary_key=True, max_length=20)
 
     def __str__(self):
         return self.name
 
 
 class Article(models.Model):
-    title = models.CharField(max_length=70)
-    body = models.TextField()
-    create_time = models.DateTimeField()
-    modify_time = models.DateTimeField()
+    title = models.CharField(primary_key=True, max_length=70)
+    body = models.TextField(null=False)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    create_time = models.DateTimeField(null=False)
+    modify_time = models.DateTimeField(null=True, blank=True)
 
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.title

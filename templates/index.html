@@ -57,11 +57,11 @@
                                 {{ article.title }}
                             </a>
                             <div class="tag">
-                                 Android | Front-End | iOS | Leveling Up | Mac <span>{{ article.create_time }} </span>
+                                 {{ article.category }} <span>{{ article.create_time }} </span>
                             </div>
                         </header>
                         <p class="content">
-                            {{ article.body }}
+                            {{ article.body | slice:":500" }}
                         </p>
                     </li>
                   {% endfor %}
